@@ -16,6 +16,8 @@ public class Dictionary {
             dic.addFile(f.getPath());
         }
 
+        System.out.println(dic.wordsLong(4).words.size());
+
 
 
     }
