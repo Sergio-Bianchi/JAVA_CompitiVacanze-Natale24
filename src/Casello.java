@@ -47,14 +47,23 @@ public class Casello {
         return output.toString();
     }
 
+    /** Aggiunge al casello un nuovo veicolo, fornendo la targa
+     * @param targa La targa del veicolo da aggiungere
+     * */
     public void accoda(String targa) {
         veicoli.add(new Veicolo(targa));
     }
 
+    /** Aggiunge al casello un nuovo veicolo
+     * @param veicolo   Il Veicolo da aggiungere
+     * */
     public void accoda(Veicolo veicolo) {
         veicoli.add(veicolo);
     }
 
+    /** Rimuove dal casello il primo veicolo inserito (FIFO)
+     * @return Il veicolo rimosso
+     * */
     public Veicolo esciEPaga() {
         if(veicoli.isEmpty()) return new Veicolo("null");
         return veicoli.removeFirst();
